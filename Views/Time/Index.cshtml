@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Display</title>
+</head>
+<style>
+    *{
+        margin: 0px auto;
+        text-align: center
+    }
+</style>
+<body>
+    @{
+        DateTime CurrentTime = DateTime.Now;
+        int year = CurrentTime.Year;
+        string month = CurrentTime.ToString("MMM");
+        int day = CurrentTime.Day;
+        string time = CurrentTime.ToString("HH:mm tt");
+
+
+    }
+    <div class="dT">
+        <h3 style="margin-top: 42px">The current time and date:</h3>
+        <div style="border: 3px solid black; height: fit-content; width: 120px; margin-top: 10px">
+        <p>@month @day, @year</p>
+        <p>@time</p>
+        </div>
+    </div>
+</body>
+
+</html>
